@@ -1,0 +1,118 @@
+const questions = [
+  {
+    id: 1,
+    question: '¿Qué describe el movimiento de un objeto?',
+    options: [
+      'El cambio de su posición con el tiempo',
+      'Su temperatura constante',
+      'El color de su superficie',
+      'La cantidad de sonido que produce',
+    ],
+    correctAnswer: 0,
+    explanation: 'El movimiento describe cómo cambia la posición de un objeto respecto a un punto de referencia.',
+  },
+  {
+    id: 2,
+    question: '¿Cuál es la fórmula básica de la velocidad?',
+    options: ['v = d / t', 'v = m · g', 'v = F / m', 'v = t / d'],
+    correctAnswer: 0,
+    explanation: 'La velocidad se obtiene al dividir la distancia recorrida entre el tiempo empleado.',
+  },
+  {
+    id: 3,
+    question: '¿Qué representa la aceleración?',
+    options: [
+      'La masa de un objeto',
+      'El cambio de velocidad respecto al tiempo',
+      'La distancia total de un recorrido',
+      'La fuerza magnética de la Tierra',
+    ],
+    correctAnswer: 1,
+    explanation: 'La aceleración mide cómo cambia la velocidad de un objeto respecto al tiempo.',
+  },
+  {
+    id: 4,
+    question: '¿Cuál es el valor aproximado de la aceleración de la gravedad en la Tierra?',
+    options: ['1.0 m/s²', '3.2 m/s²', '9.8 m/s²', '20 m/s²'],
+    correctAnswer: 2,
+    explanation: 'Cerca de la superficie terrestre, la gravedad produce una aceleración aproximada de 9.8 m/s².',
+  },
+  {
+    id: 5,
+    question: '¿Qué mide principalmente un acelerómetro?',
+    options: ['Temperatura', 'Aceleración', 'Presión', 'Sonido'],
+    correctAnswer: 1,
+    explanation: 'El acelerómetro mide la aceleración del dispositivo en los ejes X, Y y Z.',
+  },
+  {
+    id: 6,
+    question: 'En los sensores del teléfono, ¿qué representan X, Y y Z?',
+    options: [
+      'Tres colores de la pantalla',
+      'Tres unidades de tiempo',
+      'Tres dimensiones o ejes del dispositivo',
+      'Tres niveles de batería',
+    ],
+    correctAnswer: 2,
+    explanation: 'X, Y y Z representan los tres ejes espaciales en los que el teléfono registra datos.',
+  },
+  {
+    id: 7,
+    question: '¿Qué mide un giroscopio?',
+    options: ['Velocidad angular', 'Aceleración gravitatoria', 'Campo magnético', 'Distancia recorrida'],
+    correctAnswer: 0,
+    explanation: 'El giroscopio mide la velocidad angular de rotación alrededor de los ejes X, Y y Z.',
+  },
+  {
+    id: 8,
+    question: '¿Qué fenómeno detecta un magnetómetro?',
+    options: ['La luz ambiental', 'El campo magnético', 'La humedad', 'La velocidad del sonido'],
+    correctAnswer: 1,
+    explanation: 'El magnetómetro mide la intensidad del campo magnético que rodea al dispositivo.',
+  },
+  {
+    id: 9,
+    question: '¿Cómo se calcula la magnitud total de una lectura con X, Y y Z?',
+    options: [
+      'x + y + z',
+      'x · y · z',
+      '√(x² + y² + z²)',
+      '(x + y + z) / 3',
+    ],
+    correctAnswer: 2,
+    explanation: 'La magnitud de un vector tridimensional se calcula con la raíz cuadrada de la suma de sus componentes al cuadrado.',
+  },
+  {
+    id: 10,
+    question: '¿Qué ocurre durante una rotación?',
+    options: [
+      'Un objeto gira alrededor de un eje',
+      'Un objeto pierde toda su masa',
+      'Un objeto deja de tener posición',
+      'Un objeto cambia su temperatura',
+    ],
+    correctAnswer: 0,
+    explanation: 'La rotación es el movimiento de un objeto alrededor de un eje.',
+  },
+  {
+    id: 11,
+    question: 'Con el teléfono quieto y horizontal, ¿por qué el acelerómetro puede registrar cerca de 1 g?',
+    options: [
+      'Por la luz de la pantalla',
+      'Por la aceleración asociada con la gravedad',
+      'Por la conexión a Internet',
+      'Por el sonido del ambiente',
+    ],
+    correctAnswer: 1,
+    explanation: 'Aunque el teléfono esté quieto, el acelerómetro detecta la aceleración asociada con la gravedad terrestre.',
+  },
+  {
+    id: 12,
+    question: '¿En qué unidad se expresa normalmente el campo magnético medido por el magnetómetro?',
+    options: ['Metros (m)', 'Gramos (g)', 'Microteslas (μT)', 'Litros (L)'],
+    correctAnswer: 2,
+    explanation: 'El magnetómetro expresa la intensidad del campo magnético en microteslas, abreviadas como μT.',
+  },
+];
+
+export default questions;
