@@ -117,9 +117,7 @@ export async function resetProgress() {
   } catch {
     try {
       await AsyncStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(defaultProgress));
-    } catch {
-      // Returning the safe initial state keeps the app usable if storage fails.
-    }
+    } catch {}
   }
 
   return defaultProgress;

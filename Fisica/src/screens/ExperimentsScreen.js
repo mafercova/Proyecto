@@ -13,7 +13,6 @@ import useMagnetometer from '../hooks/useMagnetometer';
 import useProgress from '../hooks/useProgress';
 import { toFiniteNumber } from '../utils/sensorData';
 
-// These tolerances account for normal sensor noise in an educational experiment.
 const LEVEL_TOLERANCE = 0.18;
 const LEVEL_HOLD_MS = 3000;
 const ACCELERATION_THRESHOLD = 0.25;
@@ -99,13 +98,11 @@ export default function ExperimentsScreen() {
     }
 
     if (activeExperiment.id === 'acceleration') {
-      // A 0.25 g change from the resting magnitude avoids completing from tiny noise.
       const totalAcceleration = Math.sqrt(x ** 2 + y ** 2 + z ** 2);
       if (Math.abs(totalAcceleration - 1) >= ACCELERATION_THRESHOLD) complete();
     }
 
     if (activeExperiment.id === 'rotation') {
-      // 0.6 rad/s held briefly is detectable by hand without requiring a violent movement.
       const angularSpeed = Math.sqrt(x ** 2 + y ** 2 + z ** 2);
       if (angularSpeed >= ROTATION_THRESHOLD) {
         if (!rotationStartRef.current) rotationStartRef.current = now;
@@ -121,7 +118,6 @@ export default function ExperimentsScreen() {
       if (magneticBaselineRef.current === null) {
         magneticBaselineRef.current = magneticTotal;
       } else {
-        // Require both a practical minimum and a relative change to filter sensor noise.
         const change = Math.abs(magneticTotal - magneticBaselineRef.current);
         const relativeThreshold = magneticBaselineRef.current * MAGNETIC_RELATIVE_CHANGE;
         if (change >= Math.max(MAGNETIC_MIN_CHANGE, relativeThreshold)) complete();
