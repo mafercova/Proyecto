@@ -34,6 +34,8 @@ const styles = StyleSheet.create({
   card: {
     alignItems: 'center',
     backgroundColor: colors.surface,
+    borderColor: colors.border,
+    borderWidth: 1,
     borderRadius: radii.md,
     flexDirection: 'row',
     marginBottom: spacing.sm,
@@ -45,16 +47,16 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     alignItems: 'center',
-    backgroundColor: colors.primarySoft,
-    borderRadius: radii.sm,
-    height: 44,
+    backgroundColor: colors.infoSoft,
+    borderRadius: radii.md,
+    height: 48,
     justifyContent: 'center',
     marginRight: spacing.md,
-    width: 44,
+    width: 48,
   },
   icon: {
-    color: colors.primaryDark,
-    fontSize: 21,
+    color: colors.info,
+    fontSize: 22,
   },
   copy: {
     flex: 1,

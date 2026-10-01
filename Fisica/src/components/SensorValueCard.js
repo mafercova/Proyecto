@@ -19,9 +19,11 @@ const styles = StyleSheet.create({
   card: {
     alignItems: 'center',
     backgroundColor: colors.surface,
+    borderColor: colors.border,
+    borderWidth: 1,
     borderRadius: radii.md,
     flex: 1,
-    minHeight: 96,
+    minHeight: 104,
     justifyContent: 'center',
     padding: spacing.sm,
     ...shadows.card,

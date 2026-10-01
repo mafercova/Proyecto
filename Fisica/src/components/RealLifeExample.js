@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 
 export default function RealLifeExample({ title = 'Ejemplo real', text, icon }) {
   return (
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: spacing.md,
     padding: spacing.md,
+    ...shadows.card,
   },
   heading: {
     alignItems: 'center',

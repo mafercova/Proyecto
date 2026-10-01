@@ -1,6 +1,6 @@
 import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 import RealLifeExample from './RealLifeExample';
 
 export default function LessonModal({ lesson, visible, onClose, onOpenSimulation }) {
@@ -68,9 +68,12 @@ const styles = StyleSheet.create({
   },
   modalCard: {
     backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderTopLeftRadius: radii.lg,
     borderTopRightRadius: radii.lg,
+    borderWidth: 1,
     maxHeight: '86%',
+    ...shadows.floating,
   },
   content: {
     padding: spacing.lg,
@@ -102,7 +105,9 @@ const styles = StyleSheet.create({
   },
   formulaBox: {
     backgroundColor: colors.primarySoft,
+    borderColor: colors.infoBorder,
     borderRadius: radii.sm,
+    borderWidth: 1,
     marginBottom: spacing.lg,
     padding: spacing.md,
   },
@@ -117,6 +122,7 @@ const styles = StyleSheet.create({
     borderRadius: radii.sm,
     minHeight: 48,
     justifyContent: 'center',
+    ...shadows.card,
   },
   simulationButton: {
     alignItems: 'center',

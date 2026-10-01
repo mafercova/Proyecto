@@ -15,26 +15,33 @@ export default function TabNavigator() {
     <Tab.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: colors.surface,
+          backgroundColor: colors.background,
         },
+        headerShadowVisible: false,
         headerTitleAlign: 'center',
         headerTitleStyle: {
           color: colors.text,
           fontSize: typography.cardTitle,
-          fontWeight: '700',
+          fontWeight: '800',
         },
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.textSecondary,
         tabBarLabelStyle: {
-          fontSize: 11,
-          fontWeight: '600',
+          fontSize: typography.micro,
+          fontWeight: '700',
+        },
+        tabBarItemStyle: {
+          borderRadius: 12,
+          marginHorizontal: 3,
+          marginVertical: 5,
         },
         tabBarStyle: {
           backgroundColor: colors.surface,
           borderTopColor: colors.border,
-          height: 64,
-          paddingBottom: 8,
-          paddingTop: 6,
+          borderTopWidth: 1,
+          height: 70,
+          paddingBottom: 7,
+          paddingTop: 5,
         },
       }}
     >

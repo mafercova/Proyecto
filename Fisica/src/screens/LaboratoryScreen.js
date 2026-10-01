@@ -7,7 +7,7 @@ import MagnetometerVisualizer from '../components/MagnetometerVisualizer';
 import RealLifeExample from '../components/RealLifeExample';
 import SensorHelpModal from '../components/SensorHelpModal';
 import SensorValueCard from '../components/SensorValueCard';
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 import useAccelerometer from '../hooks/useAccelerometer';
 import useGyroscope from '../hooks/useGyroscope';
 import useMagnetometer from '../hooks/useMagnetometer';
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: spacing.lg,
-    paddingBottom: spacing.xl,
+    paddingBottom: spacing.xl + spacing.lg,
   },
   title: {
     color: colors.text,
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
   },
   sensorSelector: {
     gap: spacing.sm,
-    paddingVertical: spacing.lg,
+    paddingVertical: spacing.md,
   },
   sensorButton: {
     backgroundColor: colors.surface,
@@ -228,6 +228,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
+    ...shadows.card,
   },
   sensorButtonActive: {
     backgroundColor: colors.primary,
@@ -244,12 +245,13 @@ const styles = StyleSheet.create({
   sectionHeader: {
     alignItems: 'center',
     flexDirection: 'row',
-    marginBottom: spacing.xs,
+    marginBottom: spacing.sm,
   },
   sensorTitle: {
     color: colors.text,
     fontSize: typography.section,
     fontWeight: '800',
+    letterSpacing: 0.2,
   },
   statusDot: {
     backgroundColor: colors.accent,
@@ -265,11 +267,12 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
     fontSize: typography.body,
     lineHeight: 22,
-    marginBottom: spacing.md,
+    marginBottom: spacing.lg,
   },
   valuesRow: {
     flexDirection: 'row',
     gap: spacing.sm,
+    marginBottom: spacing.xs,
   },
   unavailableCard: {
     backgroundColor: colors.warningSoft,
@@ -278,6 +281,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: spacing.md,
     padding: spacing.md,
+    ...shadows.card,
   },
   unavailableTitle: {
     color: colors.warningText,
@@ -291,7 +295,9 @@ const styles = StyleSheet.create({
   },
   totalCard: {
     backgroundColor: colors.primarySoft,
+    borderColor: colors.infoBorder,
     borderRadius: radii.md,
+    borderWidth: 1,
     marginTop: spacing.md,
     padding: spacing.md,
   },
@@ -315,6 +321,7 @@ const styles = StyleSheet.create({
     fontSize: typography.caption,
     lineHeight: 19,
     marginTop: spacing.md,
+    paddingHorizontal: spacing.xs,
   },
   actions: {
     gap: spacing.sm,
@@ -326,6 +333,7 @@ const styles = StyleSheet.create({
     borderRadius: radii.sm,
     minHeight: 48,
     justifyContent: 'center',
+    ...shadows.card,
   },
   pressed: {
     backgroundColor: colors.primaryDark,

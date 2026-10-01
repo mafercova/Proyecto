@@ -12,7 +12,16 @@
         {
           "motionPermission": "Permite que PhysicsLab acceda al movimiento del dispositivo."
         }
-      ]
+      ],
+       [
+         "expo-splash-screen",
+         {
+           "backgroundColor": "#0F2A43",
+           "image": "./assets/splash-icon.png",
+           "imageWidth": 220,
+           "resizeMode": "contain"
+         }
+       ]
     ],
     "ios": {
       "supportsTablet": true

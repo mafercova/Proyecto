@@ -1,6 +1,6 @@
 import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 
 function getPerformanceMessage(percentage) {
   if (percentage >= 90) return '¡Excelente! Dominas muy bien estos conceptos.';
@@ -58,9 +58,12 @@ const styles = StyleSheet.create({
   modalCard: {
     alignItems: 'center',
     backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderRadius: radii.lg,
+    borderWidth: 1,
     padding: spacing.lg,
     width: '100%',
+    ...shadows.floating,
   },
   badge: {
     color: colors.primary,
@@ -87,7 +90,9 @@ const styles = StyleSheet.create({
   },
   percentageBox: {
     backgroundColor: colors.primarySoft,
+    borderColor: colors.infoBorder,
     borderRadius: radii.pill,
+    borderWidth: 1,
     marginBottom: spacing.md,
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.sm,

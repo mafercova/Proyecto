@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
   },
   activeContent: {
     padding: spacing.lg,
-    paddingBottom: spacing.xl,
+    paddingBottom: spacing.xl + spacing.lg,
   },
   title: {
     color: colors.text,
@@ -336,12 +336,14 @@ const styles = StyleSheet.create({
     borderRadius: radii.md,
     marginBottom: spacing.md,
     padding: spacing.md,
+    borderColor: colors.border,
+    borderWidth: 1,
     ...shadows.card,
   },
   balanceTrack: {
     alignItems: 'center',
-    backgroundColor: colors.primarySoft,
-    borderColor: colors.primary,
+    backgroundColor: colors.surfaceMuted,
+    borderColor: colors.info,
     borderRadius: 58,
     borderWidth: 1,
     height: 116,
@@ -372,7 +374,9 @@ const styles = StyleSheet.create({
   },
   totalCard: {
     backgroundColor: colors.primarySoft,
+    borderColor: colors.infoBorder,
     borderRadius: radii.md,
+    borderWidth: 1,
     marginTop: spacing.md,
     padding: spacing.md,
   },

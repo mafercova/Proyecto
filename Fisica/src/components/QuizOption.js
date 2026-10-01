@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     flexDirection: 'row',
     marginBottom: spacing.sm,
-    minHeight: 58,
+    minHeight: 62,
     padding: spacing.md,
   },
   selected: {

@@ -1,6 +1,6 @@
 import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 
 export default function ProgressResetModal({ visible, onCancel, onConfirm }) {
   return (
@@ -40,9 +40,12 @@ const styles = StyleSheet.create({
   },
   modalCard: {
     backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderRadius: radii.lg,
+    borderWidth: 1,
     padding: spacing.lg,
     width: '100%',
+    ...shadows.floating,
   },
   title: {
     color: colors.text,

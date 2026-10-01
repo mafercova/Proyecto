@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 import { toFiniteNumber } from '../utils/sensorData';
 import SimpleWheel from './SimpleWheel';
 
@@ -71,11 +71,11 @@ export default function GyroscopeVisualizer({ x = 0, y = 0, z = 0, paused = fals
 }
 
 const styles = StyleSheet.create({
-  card: { backgroundColor: colors.surface, borderRadius: radii.md, marginTop: spacing.md, padding: spacing.md },
+  card: { backgroundColor: colors.surface, borderColor: colors.border, borderRadius: radii.md, borderWidth: 1, marginTop: spacing.md, padding: spacing.md, ...shadows.card },
   label: { color: colors.text, fontSize: typography.cardTitle, fontWeight: '800', marginBottom: spacing.sm },
-  area: { alignItems: 'center', backgroundColor: colors.primarySoft, borderRadius: radii.sm, height: 190, justifyContent: 'center' },
+  area: { alignItems: 'center', backgroundColor: colors.surfaceMuted, borderColor: colors.primarySoft, borderRadius: radii.md, borderWidth: 1, height: 190, justifyContent: 'center' },
   speed: { color: colors.primaryDark, fontSize: typography.body, fontWeight: '800', marginTop: spacing.sm, textAlign: 'center' },
-  explanationCard: { backgroundColor: colors.primarySoft, borderRadius: radii.sm, marginTop: spacing.md, padding: spacing.md },
+  explanationCard: { backgroundColor: colors.infoSoft, borderColor: colors.infoBorder, borderRadius: radii.sm, borderWidth: 1, marginTop: spacing.md, padding: spacing.md },
   explanationTitle: { color: colors.text, fontSize: typography.cardTitle, fontWeight: '800', marginBottom: spacing.xs },
   explanation: { color: colors.textSecondary, fontSize: typography.body, lineHeight: 21 },
   note: { color: colors.textSecondary, fontSize: typography.caption, lineHeight: 19, marginTop: spacing.sm },

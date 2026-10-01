@@ -3,7 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import FeatureCard from '../components/FeatureCard';
 import ProgressResetModal from '../components/ProgressResetModal';
-import { colors, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 import useProgress from '../hooks/useProgress';
 
 const features = [
@@ -126,9 +126,10 @@ const styles = StyleSheet.create({
   },
   hero: {
     backgroundColor: colors.primary,
-    borderRadius: 22,
+    borderRadius: radii.lg,
     marginBottom: spacing.xl,
     padding: spacing.lg,
+    ...shadows.floating,
   },
   greeting: {
     color: colors.primaryOnDark,
@@ -139,7 +140,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.textOnPrimary,
-    fontSize: 32,
+    fontSize: typography.display,
     fontWeight: '800',
     marginBottom: spacing.sm,
   },
@@ -177,6 +178,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     borderWidth: 1,
     padding: spacing.md,
+    ...shadows.card,
   },
   progressRow: {
     borderBottomColor: colors.border,
@@ -200,7 +202,7 @@ const styles = StyleSheet.create({
   },
   resetButton: {
     alignItems: 'center',
-    borderColor: colors.border,
+    borderColor: colors.dangerBorder,
     borderRadius: 10,
     borderWidth: 1,
     marginTop: spacing.md,
@@ -211,7 +213,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primarySoft,
   },
   resetText: {
-    color: colors.textSecondary,
+    color: colors.danger,
     fontSize: typography.caption,
     fontWeight: '700',
   },

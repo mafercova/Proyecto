@@ -25,6 +25,8 @@ export default function LessonCard({ lesson, onPress }) {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.surface,
+    borderColor: colors.border,
+    borderWidth: 1,
     borderRadius: radii.md,
     flexDirection: 'row',
     marginBottom: spacing.md,
@@ -37,11 +39,11 @@ const styles = StyleSheet.create({
   numberBadge: {
     alignItems: 'center',
     backgroundColor: colors.primarySoft,
-    borderRadius: radii.sm,
-    height: 42,
+    borderRadius: radii.md,
+    height: 46,
     justifyContent: 'center',
     marginRight: spacing.md,
-    width: 42,
+    width: 46,
   },
   number: {
     color: colors.primaryDark,
@@ -63,7 +65,7 @@ const styles = StyleSheet.create({
     lineHeight: 21,
   },
   action: {
-    color: colors.primary,
+    color: colors.primaryDark,
     fontSize: typography.caption,
     fontWeight: '700',
     marginTop: spacing.sm,

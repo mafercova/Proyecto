@@ -1,6 +1,6 @@
 import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 import AccelerationSimulation from './simulations/AccelerationSimulation';
 import GravitySimulation from './simulations/GravitySimulation';
 import MagnetismSimulation from './simulations/MagnetismSimulation';
@@ -42,11 +42,11 @@ export default function PhysicsSimulationModal({ simulation, title, visible, onC
 
 const styles = StyleSheet.create({
   overlay: { backgroundColor: colors.overlay, flex: 1, justifyContent: 'flex-end' },
-  modalCard: { backgroundColor: colors.surface, borderTopLeftRadius: radii.lg, borderTopRightRadius: radii.lg, maxHeight: '94%' },
+  modalCard: { backgroundColor: colors.surface, borderColor: colors.border, borderTopLeftRadius: radii.lg, borderTopRightRadius: radii.lg, borderWidth: 1, maxHeight: '94%', ...shadows.floating },
   content: { padding: spacing.lg },
   eyebrow: { color: colors.primary, fontSize: typography.caption, fontWeight: '800', letterSpacing: 1, marginBottom: spacing.xs },
   title: { color: colors.text, fontSize: typography.title, fontWeight: '800', marginBottom: spacing.md },
-  closeButton: { alignItems: 'center', backgroundColor: colors.primary, borderRadius: radii.sm, justifyContent: 'center', marginTop: spacing.lg, minHeight: 48 },
+  closeButton: { alignItems: 'center', backgroundColor: colors.primary, borderRadius: radii.sm, justifyContent: 'center', marginTop: spacing.lg, minHeight: 48, ...shadows.card },
   pressed: { backgroundColor: colors.primaryDark },
   closeText: { color: colors.textOnPrimary, fontSize: typography.body, fontWeight: '700' },
 });

@@ -32,6 +32,8 @@ export default function ExperimentCard({ experiment, completed = false, onPress 
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.surface,
+    borderColor: colors.border,
+    borderWidth: 1,
     borderRadius: radii.md,
     flexDirection: 'row',
     marginBottom: spacing.md,
@@ -40,15 +42,15 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     alignItems: 'center',
-    backgroundColor: colors.primarySoft,
-    borderRadius: radii.sm,
-    height: 44,
+    backgroundColor: colors.infoSoft,
+    borderRadius: radii.md,
+    height: 48,
     justifyContent: 'center',
     marginRight: spacing.md,
-    width: 44,
+    width: 48,
   },
   icon: {
-    color: colors.primaryDark,
+    color: colors.info,
     fontSize: 23,
   },
   content: {
@@ -77,10 +79,19 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   level: {
+    backgroundColor: colors.surfaceMuted,
+    borderColor: colors.border,
+    borderRadius: radii.pill,
+    borderWidth: 1,
     color: colors.textSecondary,
     fontSize: typography.caption,
+    overflow: 'hidden',
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 3,
   },
   completed: {
+    backgroundColor: colors.successSoft,
+    borderColor: colors.successBorder,
     color: colors.successText,
     fontWeight: '700',
   },

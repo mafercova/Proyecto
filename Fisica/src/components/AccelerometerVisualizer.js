@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 import { toFiniteNumber } from '../utils/sensorData';
 import SimpleCar from './SimpleCar';
 
@@ -79,15 +79,15 @@ export default function AccelerometerVisualizer({ x = 0, y = 0, paused = false }
 }
 
 const styles = StyleSheet.create({
-  card: { backgroundColor: colors.surface, borderRadius: radii.md, marginTop: spacing.md, padding: spacing.md },
+  card: { backgroundColor: colors.surface, borderColor: colors.border, borderRadius: radii.md, borderWidth: 1, marginTop: spacing.md, padding: spacing.md, ...shadows.card },
   label: { color: colors.text, fontSize: typography.cardTitle, fontWeight: '800', marginBottom: spacing.sm },
-  area: { alignItems: 'center', backgroundColor: colors.primarySoft, borderColor: colors.primary, borderRadius: radii.sm, borderWidth: 1, height: 190, justifyContent: 'center', overflow: 'hidden' },
+  area: { alignItems: 'center', backgroundColor: colors.surfaceMuted, borderColor: colors.primarySoft, borderRadius: radii.md, borderWidth: 1, height: 190, justifyContent: 'center', overflow: 'hidden' },
   object: { height: 52, position: 'absolute', width: OBJECT_SIZE },
   gravityArrow: { alignItems: 'center', position: 'absolute', right: spacing.lg, top: spacing.md },
   gravityText: { color: colors.accent, fontSize: typography.cardTitle, fontWeight: '800' },
   direction: { color: colors.primaryDark, fontSize: typography.body, fontWeight: '800', marginTop: spacing.sm, textAlign: 'center' },
   axisHint: { color: colors.textSecondary, fontSize: typography.caption, lineHeight: 19, marginTop: spacing.xs },
-  explanationCard: { backgroundColor: colors.primarySoft, borderRadius: radii.sm, marginTop: spacing.md, padding: spacing.md },
+  explanationCard: { backgroundColor: colors.infoSoft, borderColor: colors.infoBorder, borderRadius: radii.sm, borderWidth: 1, marginTop: spacing.md, padding: spacing.md },
   explanationTitle: { color: colors.text, fontSize: typography.cardTitle, fontWeight: '800', marginBottom: spacing.xs },
   explanation: { color: colors.textSecondary, fontSize: typography.body, lineHeight: 21 },
 });

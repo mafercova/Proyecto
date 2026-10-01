@@ -1,6 +1,6 @@
 import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../constants/theme';
 
 export default function ExperimentInstructionModal({ experiment, visible, onStart, onCancel }) {
   if (!experiment) return null;
@@ -53,9 +53,12 @@ const styles = StyleSheet.create({
   },
   modalCard: {
     backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderTopLeftRadius: radii.lg,
     borderTopRightRadius: radii.lg,
+    borderWidth: 1,
     maxHeight: '90%',
+    ...shadows.floating,
   },
   content: {
     padding: spacing.lg,
@@ -87,7 +90,9 @@ const styles = StyleSheet.create({
   },
   infoBox: {
     backgroundColor: colors.primarySoft,
+    borderColor: colors.infoBorder,
     borderRadius: radii.sm,
+    borderWidth: 1,
     marginBottom: spacing.sm,
     padding: spacing.md,
   },
@@ -103,7 +108,9 @@ const styles = StyleSheet.create({
   },
   warningBox: {
     backgroundColor: colors.warningSoft,
+    borderColor: colors.warningBorder,
     borderRadius: radii.sm,
+    borderWidth: 1,
     marginBottom: spacing.lg,
     padding: spacing.md,
   },

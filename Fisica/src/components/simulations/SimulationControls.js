@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { colors, radii, spacing, typography } from '../../constants/theme';
+import { colors, radii, shadows, spacing, typography } from '../../constants/theme';
 
 export default function SimulationControls({ running, onStart, onPause, onReset }) {
   return (
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     borderRadius: radii.sm,
     flex: 1,
     justifyContent: 'center',
-    minHeight: 44,
+    minHeight: 48,
+    ...shadows.card,
   },
   primaryText: {
     color: colors.textOnPrimary,
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     flex: 1,
     justifyContent: 'center',
-    minHeight: 44,
+    minHeight: 48,
   },
   secondaryText: {
     color: colors.primary,
